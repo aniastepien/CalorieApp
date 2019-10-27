@@ -1,0 +1,55 @@
+
+.welcome {
+    padding: 60px;
+    background-color: white;
+    border: 2px solid lightgrey;
+    text-align: center;
+    width: auto;
+    max-width: 500px;
+    min-height: 300px;
+    border-radius: 6px;
+    // margin-left:auto;
+    // margin-right: auto;
+    margin-top: 100px;
+    margin-left: 100px;
+    
+    position: absolute;
+
+}
+
+// .welcome div {
+//     margin-top: 200px;
+// }
+
+.welcome button {
+
+    background-color: lightsteelblue;
+    border: 2px solid lightgrey;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 20px;
+    margin: 40px;
+}
+
+.main {
+
+    background-color: black;
+    background-image: url("https://cdn.wallpapersafari.com/20/5/nF8gWd.jpg");
+    background-repeat: no-repeat;
+    background-position: top;   
+    height: 1400px;
+}
+
+nav  {
+    text-align: center;
+}
+
+.navi li{
+    display: inline-block;
+    padding: 5px 25px 5px 25px ;
+    font-size: 20px;
+    justify-content: center;
+}
+h1 {
+    padding-left: 50px;
+}

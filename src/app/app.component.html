@@ -1,0 +1,25 @@
+
+<header>
+<h1>Kalkulator Kalorii</h1>
+    <nav class="menu">
+        <ul class="navi">
+            <li (click)="activePage='bmi'">Oblicz BMI</li>
+            <li (click)="activePage='bmr'">Oblicz BMR</li>
+            <li>Kalkulator Kalorii</li>
+            <li>Wykresy</li>
+        </ul>
+    </nav>
+</header>
+
+<div class="main"> 
+    <div class="welcome">
+        <h1>Najprostszy sposób na kontrolowanie swojej diety!</h1>
+        <h2>Zacznij od dziś!</h2>
+        <button (click)="activePage='bmr'">Oblicz swoje dzienne zapotrzebowanie!</button>
+    </div>
+    <app-day-calorie-form *ngIf="activePage=='bmr'"></app-day-calorie-form>
+    <app-bmi-form *ngIf="activePage=='bmi'"></app-bmi-form>
+</div>
+
+
+

@@ -1,0 +1,29 @@
+
+<form *ngIf="!bmiPoliczone" #Bmi="ngForm" (ngSubmit)="onSubmit(Bmi)" class="BmiForm">
+        <h1>Oblicz swój wskaźnik BMI</h1>
+        <div *ngFor="let gender of genders; let i = index">
+            <label>
+                <input type="radio" name="genderValue" [value]="gender" ngModel>
+                {{ gender }}
+            </label>
+        </div>
+        <div>
+            <label>
+                Waga:
+                <input type="number" name="wight" #wightInput="ngModel" ngModel required>
+                kg
+            </label>
+        </div>
+        <!-- <div *ngIf="!wightInput.valid  && wightInput.touched" class="alert alert-danger"> Pole Waga nie moze byc puste</div> -->
+        <div>
+            <label>
+                Wzrost:
+                <input type="number" name="hight" #hightInput="ngModel" ngModel required>
+                cm
+            </label>
+        </div>
+        <button type="submit">Oblicz</button>
+</form>
+    
+<div *ngIf="bmiPoliczone" class="BmiResult"> Twój wskaźnik BMI wynosi: {{ UserBmi.toFixed(2) }} </div> 
+    

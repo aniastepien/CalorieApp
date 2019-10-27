@@ -1,0 +1,52 @@
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+
+.CalorieForm  {
+    // height: auto;
+    // width: auto;
+    // max-width: 400px;
+    width: 500px;
+    height: 500px;
+    margin: 0;
+    padding: 30px;
+    background-color: white;
+    border: 2px solid lightgrey;
+    border-radius: 6px;
+    font-size: 18px;
+    font-family: 'Times New Roman', 'Times, serif';
+}
+
+// form {
+//     float: left;
+//     Position: absolute;
+//     Top: 20px;
+//     Right: 20px;
+
+// }
+
+
+.CalorieForm select {
+    width: 200px;
+}
+
+.kalorie{
+    font-weight: 800;
+    
+}
+
+.CalorieForm h1 {
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 200;
+}
+
+.CalorieResult {
+    padding: 60px 40px 60px 40px;
+    background-color: white;
+    border: 2px solid lightgrey;
+    font-size: 25px;
+    font-family: 'Times New Roman', 'Times, serif';height: auto;
+    width: 500px;
+    height: 500px;
+    text-align: center;
+
+}

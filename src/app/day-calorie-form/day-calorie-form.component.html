@@ -1,0 +1,57 @@
+<form *ngIf="!bmrPoliczone"  #dayCalorie="ngForm" (ngSubmit)="onSubmit(dayCalorie)" class="CalorieForm">
+    <h1>Oblicz dzienne zapotrzebowanie na <span class="kalorie">kalorie</span></h1>
+    <div>
+        <label> 
+            Imię:
+            <input type="text" name="name" #nameInput="ngModel" ngModel required class="form-control">
+        </label>
+    </div>
+    <div *ngFor="let gender of genders; let i = index">
+        <label>
+            <input type="radio" name="genderValue" [value]="gender" ngModel>
+            {{ gender }}
+        </label>
+    </div>
+    <div>
+        <label>
+            Wiek:
+            <input type="number" name="age" #ageInput="ngModel" ngModel required>
+            (18-99)
+        </label>
+    </div>
+    <div *ngIf="!ageInput.valid  && ageInput.touched" class="alert alert-danger"> Pole Wiek nie moze byc puste</div>
+    <div>
+        <label>
+            Waga:
+            <input type="number" name="wight" #wightInput="ngModel" ngModel required>
+            kg
+        </label>
+    </div>
+    <div *ngIf="!wightInput.valid  && wightInput.touched" class="alert alert-danger"> Pole Waga nie moze byc puste</div>
+    <div>
+        <label>
+            Wzrost:
+            <input type="number" name="hight" #hightInput="ngModel" ngModel required>
+            cm
+        </label>
+    </div>
+    <div *ngIf="!hightInput.valid  && hightInput.touched" class="alert alert-danger"> Pole wzrost nie moze byc puste</div>
+    <div>
+        <select name="activities"  ngModel>
+            <option *ngFor="let activity of activities let i = index" [value]="activity.value" >
+                {{ activity.name }} 
+            </option>
+        </select>            
+    </div>
+    <!-- <div *ngIf="!#ActivityOption.valid  && #ActivityOption.touched" class="alert alert-danger"> Podając tę informację zwiększasz precyzyjność obliczeń</div> -->
+    <button type="submit">Oblicz</button>
+
+
+
+</form>
+
+
+
+
+
+<div *ngIf="bmrPoliczone" class="CalorieResult">{{ name }} Twoje dzienne zapotrzebowanie wynosi {{ UserBmr.toFixed(2) }} kalorie</div> 
