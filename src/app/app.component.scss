@@ -1,3 +1,4 @@
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
 
 .welcome {
     padding: 60px;
@@ -8,26 +9,18 @@
     max-width: 500px;
     min-height: 300px;
     border-radius: 6px;
-    // margin-left:auto;
-    // margin-right: auto;
     margin-top: 100px;
-    margin-left: 100px;
-    
+    margin-left: 100px;    
     position: absolute;
 
 }
 
-// .welcome div {
-//     margin-top: 200px;
-// }
 
-.welcome button {
-
-    background-color: lightsteelblue;
-    border: 2px solid lightgrey;
+.btn-outline-info{
+    
     padding: 12px;
     border-radius: 6px;
-    font-size: 20px;
+    font-size: 22px;
     margin: 40px;
 }
 
@@ -51,5 +44,11 @@ nav  {
     justify-content: center;
 }
 h1 {
-    padding-left: 50px;
+
+    font-size: 33px;
+}
+
+h2 {
+    margin-top: 20px;
+    font-size: 25px;
 }

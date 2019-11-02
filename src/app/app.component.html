@@ -1,25 +1,33 @@
 
 <header>
-<h1>Kalkulator Kalorii</h1>
-    <nav class="menu">
-        <ul class="navi">
-            <li (click)="activePage='bmi'">Oblicz BMI</li>
-            <li (click)="activePage='bmr'">Oblicz BMR</li>
-            <li>Kalkulator Kalorii</li>
-            <li>Wykresy</li>
-        </ul>
-    </nav>
-</header>
-
-<div class="main"> 
-    <div class="welcome">
-        <h1>Najprostszy sposób na kontrolowanie swojej diety!</h1>
-        <h2>Zacznij od dziś!</h2>
-        <button (click)="activePage='bmr'">Oblicz swoje dzienne zapotrzebowanie!</button>
+    <h1 (click)="activePage='basic'">Kalkulator Kalorii</h1>
+        <nav class="menu">
+            <ul class="navi">
+                <li (click)="activePage='bmi'">Oblicz BMI</li>
+                <li (click)="activePage='bmr'">Oblicz BMR</li>
+                <li>Kalkulator Kalorii</li>
+                <li>Wykresy</li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="main"> 
+        <div *ngIf="activePage=='basic'"class="welcome">
+            <h1>Najprostszy sposób na kontrolowanie swojej diety!</h1>
+            <h2>Zacznij od dziś!</h2>
+            <button (click)="activePage='bmr'" class="btn-outline-info">Oblicz swoje dzienne zapotrzebowanie!</button>
+        </div>
+        <app-day-calorie-form *ngIf="activePage=='bmr'"></app-day-calorie-form>
+        <app-bmi-form *ngIf="activePage=='bmi'"></app-bmi-form>
     </div>
-    <app-day-calorie-form *ngIf="activePage=='bmr'"></app-day-calorie-form>
-    <app-bmi-form *ngIf="activePage=='bmi'"></app-bmi-form>
-</div>
+    
 
 
 
+<!-- <div *ngIf="activePage=='basic'" class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Najprostszy sposób na kontrolowanie swojej diety!</h5>
+      <p class="card-text">Zacznij od dziś!</p>
+      <button (click)="activePage='bmr'" class="btn-outline-info">Oblicz swoje dzienne zapotrzebowanie!</button>
+    </div>
+</div> -->

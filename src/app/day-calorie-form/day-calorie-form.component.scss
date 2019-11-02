@@ -1,18 +1,15 @@
 @import "../../../node_modules/bootstrap/scss/bootstrap.scss";
 
 .CalorieForm  {
-    // height: auto;
-    // width: auto;
-    // max-width: 400px;
     width: 500px;
     height: 500px;
-    margin: 0;
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 100px;
     padding: 30px;
     background-color: white;
     border: 2px solid lightgrey;
     border-radius: 6px;
-    font-size: 18px;
-    font-family: 'Times New Roman', 'Times, serif';
 }
 
 // form {
@@ -25,7 +22,7 @@
 
 
 .CalorieForm select {
-    width: 200px;
+    max-width: 200px;
 }
 
 .kalorie{
@@ -48,5 +45,8 @@
     width: 500px;
     height: 500px;
     text-align: center;
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 100px;
 
 }

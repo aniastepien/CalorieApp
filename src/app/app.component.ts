@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'calorieCalculator';
   ActiveBmr = false;
-  activePage = '';
+  activePage = 'basic';
 }
 
 
