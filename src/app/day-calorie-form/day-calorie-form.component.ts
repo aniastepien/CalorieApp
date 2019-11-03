@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormBuilder } from '@angular/forms';
 import { format } from 'url';
+import { SettingsService } from '../settings.service';
 
 @Component({
   selector: 'app-day-calorie-form',
   templateUrl: './day-calorie-form.component.html',
   styleUrls: ['./day-calorie-form.component.scss']
 })
+
 export class DayCalorieFormComponent implements OnInit {
 
   bmrPoliczone = false;
@@ -20,7 +22,7 @@ export class DayCalorieFormComponent implements OnInit {
     {name: 'wysoka aktywność (praca fizyczna i 3-4 treningi w tygodniu)', value: 1.7 },
     {name: 'bardzo wysoka aktywność (zawodowi sportowcy, osoby codziennie trenujące)', value: 1.9 }];
 
-  constructor() { }
+  constructor(private Set: SettingsService) { }
 
 onSubmit(form) {
   console.log(form.value);
@@ -42,6 +44,8 @@ BMR(result) {
 
   }
   this.bmrPoliczone = true;
+  this.Set.userBmr = this.UserBmr;
+  this.Set.userName = result.name;
 }
 
 

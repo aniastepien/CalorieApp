@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SettingsService } from '../settings.service';
 
 @Component({
   selector: 'app-bmi-form',
@@ -20,7 +21,7 @@ export class BmiFormComponent implements OnInit {
     {name: 'otyłość', value: 999}
   ];
 
-  constructor() { }
+  constructor(private Set: SettingsService) { }
 
   onSubmit(form) {
     console.log(form.value);
@@ -39,6 +40,8 @@ BMI(result) {
     break;
       }
   }
+  this.Set.userBmi = this.UserBmi;
+  console.log(this.UserBmi);
 }
 
 

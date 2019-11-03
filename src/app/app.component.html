@@ -5,7 +5,7 @@
             <ul class="navi">
                 <li (click)="activePage='bmi'">Oblicz BMI</li>
                 <li (click)="activePage='bmr'">Oblicz BMR</li>
-                <li>Kalkulator Kalorii</li>
+                <li (click)="activePage='foodApi'">Kalkulator Kalorii</li>
                 <li>Wykresy</li>
             </ul>
         </nav>
@@ -19,6 +19,8 @@
         </div>
         <app-day-calorie-form *ngIf="activePage=='bmr'"></app-day-calorie-form>
         <app-bmi-form *ngIf="activePage=='bmi'"></app-bmi-form>
+        <app-food-api *ngIf="activePage=='foodApi'"></app-food-api>
+
     </div>
     
 

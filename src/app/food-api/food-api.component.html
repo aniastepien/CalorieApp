@@ -1,0 +1,44 @@
+<body>
+    <!-- <nav>
+        <ul class="nav flex-column">
+            <li>Info</li>
+            <li>Co dziś zjadłeś</li>
+            <li>Historia</li>
+            <li>Lista posiłków</li>
+        </ul>
+    
+    </nav> -->
+    <!-- <section class="content">
+        <app-calculator></app-calculator>
+        <H1> Witaj {{ userName}} </H1>
+        <p>Twoje dzienne zapotrzebowanie to {{ UserBmr.toFixed(2) }}</p>
+        <p> Twoje BMI wynosi {{ UserBmi.toFixed(2) }} </p>
+        <p> Chcesz jeszcze raz przeliczyć wartości ? </p>
+        <button class="btn btn-outline-info" >Przelicz BMI</button><button class="btn btn-outline-info">Przelicz BMR</button>
+    </section> -->
+    <div>
+            <p>Twoje dzienne zapotrzebowanie to {{ UserBmr.toFixed(2) }}</p>
+            <input type ="date" ng-model="string" required />
+    </div>
+    <form>
+        <h3>Wybierz produkty z listy by dodać je do dzisiejszego dnia</h3>
+        <div>
+            <select name="FoodItems"  ngModel>
+                <option disabled  value="default">Co jadłeś?</option>
+                <option *ngFor="let food of FoodItems let i = index" [value]="food.value" >
+                    {{ food.name }} 
+                </option>
+            </select>
+            <button #dadaily="ngForm" (ngSubmit)="onSubmit(dayCalorie)" type="submit">Dodaj</button>
+        </div>
+    </form>
+    <div class="DayCalorieTable">
+            <table> 
+                    <tbody>
+                            <tr><th>Nazwa</th><th>Kcal</th></tr> 
+                    </tbody>
+            </table> 
+    </div>
+
+</body>
+#dayCalorie="ngForm" (ngSubmit)="onSubmit(dayCalorie)"
