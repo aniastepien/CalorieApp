@@ -30,7 +30,7 @@
     background-image: url("https://cdn.wallpapersafari.com/20/5/nF8gWd.jpg");
     background-repeat: no-repeat;
     background-position: top;   
-    height: 1400px;
+    height: 1050px;
 }
 
 nav  {
@@ -51,4 +51,17 @@ h1 {
 h2 {
     margin-top: 20px;
     font-size: 25px;
+}
+
+footer {
+    text-align: center;
+    background-color: black;
+}
+
+footer li {
+    display: inline-block;
+    padding: 10px 25px 10px 25px ;
+    font-size: 17px;
+    justify-content: center;
+    color: gray;
 }

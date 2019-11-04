@@ -9,20 +9,27 @@
                 <li>Wykresy</li>
             </ul>
         </nav>
-    </header>
+</header>
     
-    <div class="main"> 
-        <div *ngIf="activePage=='basic'"class="welcome">
-            <h1>Najprostszy sposób na kontrolowanie swojej diety!</h1>
-            <h2>Zacznij od dziś!</h2>
-            <button (click)="activePage='bmr'" class="btn-outline-info">Oblicz swoje dzienne zapotrzebowanie!</button>
-        </div>
-        <app-day-calorie-form *ngIf="activePage=='bmr'"></app-day-calorie-form>
-        <app-bmi-form *ngIf="activePage=='bmi'"></app-bmi-form>
-        <app-food-api *ngIf="activePage=='foodApi'"></app-food-api>
-
+<div class="main"> 
+    <div *ngIf="activePage=='basic'"class="welcome">
+        <h1>Najprostszy sposób na kontrolowanie swojej diety!</h1>
+        <h2>Zacznij od dziś!</h2>
+        <button (click)="activePage='bmr'" class="btn-outline-info">Oblicz swoje dzienne zapotrzebowanie!</button>
     </div>
-    
+    <app-day-calorie-form *ngIf="activePage=='bmr'"></app-day-calorie-form>
+    <app-bmi-form *ngIf="activePage=='bmi'"></app-bmi-form>
+    <app-food-api *ngIf="activePage=='foodApi'"></app-food-api>
+
+</div>
+<footer>
+    <ul>
+        <li>O nas</li>
+        <li>Reklama</li>
+        <li>Kontakt</li>
+    </ul>
+</footer>
+
 
 
 

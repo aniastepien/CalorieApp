@@ -28,7 +28,6 @@ onSubmit(form) {
   console.log(form.value);
   this.BMR(form.value);
   this.name = form.value.name;
-
 }
 
 
@@ -44,12 +43,14 @@ BMR(result) {
 
   }
   this.bmrPoliczone = true;
+  this.Set.BmrPoliczone = true;
   this.Set.userBmr = this.UserBmr;
   this.Set.userName = result.name;
 }
 
 
   ngOnInit() {
+
   }
 
 }
