@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SettingsService } from 'src/app/settings.service';
-import { FoodService } from 'src/app/Food.service';
+import { FoodService } from 'src/app/food.service';
 import { FoodItemCal } from '../food';
 
 
@@ -26,16 +26,9 @@ export class FoodApiComponent implements OnInit {
     this.CalorieTable(form.value);
   }
 
-
-
-
-
 CalorieTable(result) {
 
   let index = result.FoodItems;
-
-
-
 
   console.log(this.FoodItems[index].calories);
   console.log(this.FoodItems[index].name);
@@ -43,8 +36,6 @@ CalorieTable(result) {
   this.EatenFoods.push(this.FoodItems[index]);
 
 }
-
-
 
   ngOnInit() {
     this.FoodItems = this.FoodSrv.getFoodCalorie();
